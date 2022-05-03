@@ -16,6 +16,9 @@
 		8FE7B792281FCD4B003C7890 /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7B791281FCD4B003C7890 /* TicTacToeTests.swift */; };
 		8FE7B79C281FCD4B003C7890 /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7B79B281FCD4B003C7890 /* TicTacToeUITests.swift */; };
 		8FE7B79E281FCD4B003C7890 /* TicTacToeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7B79D281FCD4B003C7890 /* TicTacToeUITestsLaunchTests.swift */; };
+		8FE7B7AB281FCE5B003C7890 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7B7AA281FCE5B003C7890 /* BoardView.swift */; };
+		8FE7B7B0281FCF12003C7890 /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7B7AF281FCF12003C7890 /* BoardCollectionViewCell.swift */; };
+		8FE7B7B2281FCF3E003C7890 /* GridCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7B7B1281FCF3E003C7890 /* GridCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		8FE7B797281FCD4B003C7890 /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE7B79B281FCD4B003C7890 /* TicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITests.swift; sourceTree = "<group>"; };
 		8FE7B79D281FCD4B003C7890 /* TicTacToeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8FE7B7AA281FCE5B003C7890 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		8FE7B7AF281FCF12003C7890 /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
+		8FE7B7B1281FCF3E003C7890 /* GridCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,11 @@
 		8FE7B779281FCD49003C7890 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				8FE7B7AC281FCE93003C7890 /* Internal */,
 				8FE7B77A281FCD49003C7890 /* AppDelegate.swift */,
 				8FE7B77C281FCD49003C7890 /* SceneDelegate.swift */,
 				8FE7B77E281FCD49003C7890 /* ViewController.swift */,
+				8FE7B7AA281FCE5B003C7890 /* BoardView.swift */,
 				8FE7B780281FCD49003C7890 /* Main.storyboard */,
 				8FE7B783281FCD4B003C7890 /* Assets.xcassets */,
 				8FE7B785281FCD4B003C7890 /* LaunchScreen.storyboard */,
@@ -125,6 +133,15 @@
 				8FE7B79D281FCD4B003C7890 /* TicTacToeUITestsLaunchTests.swift */,
 			);
 			path = TicTacToeUITests;
+			sourceTree = "<group>";
+		};
+		8FE7B7AC281FCE93003C7890 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				8FE7B7AF281FCF12003C7890 /* BoardCollectionViewCell.swift */,
+				8FE7B7B1281FCF3E003C7890 /* GridCollectionViewLayout.swift */,
+			);
+			path = Internal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE7B7B2281FCF3E003C7890 /* GridCollectionViewLayout.swift in Sources */,
 				8FE7B77F281FCD49003C7890 /* ViewController.swift in Sources */,
+				8FE7B7AB281FCE5B003C7890 /* BoardView.swift in Sources */,
 				8FE7B77B281FCD49003C7890 /* AppDelegate.swift in Sources */,
 				8FE7B77D281FCD49003C7890 /* SceneDelegate.swift in Sources */,
+				8FE7B7B0281FCF12003C7890 /* BoardCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +465,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +475,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -473,6 +494,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +504,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
